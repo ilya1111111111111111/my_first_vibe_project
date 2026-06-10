@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeoCode — Школа программирования будущего</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- =========================================================
+       NAVBAR
+  ========================================================= -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container-fluid px-4">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <span class="logo-bracket">[</span>Neo<span class="logo-accent">Code</span><span class="logo-bracket">]</span>
+      </a>
+
+      <!-- Mobile toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <i class="bi bi-grid-3x3-gap-fill text-yellow"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mx-auto gap-2">
+          <li class="nav-item">
+            <a class="nav-link nav-btn" href="#home">Главная</a>
+          </li>
+
+          <!-- Курсы с мегаменю -->
+          <li class="nav-item dropdown has-megamenu" id="coursesDropdown">
+            <a class="nav-link nav-btn nav-courses" href="#courses" id="coursesToggle">
+              Наши курсы <i class="bi bi-chevron-down ms-1 chevron-icon"></i>
+            </a>
+            <!-- Sandwich Panel -->
+            <div class="sandwich-panel" id="sandwichPanel">
+              <div class="sandwich-inner">
+                <div class="row g-3">
+                  <div class="col-6 col-md-4">
+                    <a class="sandwich-item" href="#courses">
+                      <span class="si-icon" style="color:var(--yellow)"><i class="bi bi-code-slash"></i></span>
+                      <span class="si-text">
+                        <strong>Программирование</strong>
+                        <small>Python, JS, C++, Java</small>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <a class="sandwich-item" href="#courses">
+                      <span class="si-icon" style="color:var(--purple)"><i class="bi bi-palette2"></i></span>
+                      <span class="si-text">
+                        <strong>Дизайн</strong>
+                        <small>UI/UX, Figma, Graphic</small>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <a class="sandwich-item" href="#courses">
+                      <span class="si-icon" style="color:var(--red)"><i class="bi bi-shield-lock"></i></span>
+                      <span class="si-text">
+                        <strong>Кибербезопасность</strong>
+                        <small>Ethical Hacking, CTF</small>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <a class="sandwich-item" href="#courses">
+                      <span class="si-icon" style="color:var(--green)"><i class="bi bi-robot"></i></span>
+                      <span class="si-text">
+                        <strong>Искусственный интеллект</strong>
+                        <small>ML, Deep Learning, GPT</small>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <a class="sandwich-item" href="#courses">
+                      <span class="si-icon" style="color:var(--yellow)"><i class="bi bi-phone"></i></span>
+                      <span class="si-text">
+                        <strong>Мобильная разработка</strong>
+                        <small>Flutter, React Native</small>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <a class="sandwich-item" href="#courses">
+                      <span class="si-icon" style="color:var(--purple)"><i class="bi bi-cloud-arrow-up"></i></span>
+                      <span class="si-text">
+                        <strong>DevOps &amp; Cloud</strong>
+                        <small>Docker, AWS, CI/CD</small>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <a class="sandwich-item" href="#courses">
+                      <span class="si-icon" style="color:var(--red)"><i class="bi bi-graph-up-arrow"></i></span>
+                      <span class="si-text">
+                        <strong>Data Science</strong>
+                        <small>SQL, Pandas, Tableau</small>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <a class="sandwich-item" href="#courses">
+                      <span class="si-icon" style="color:var(--green)"><i class="bi bi-globe2"></i></span>
+                      <span class="si-text">
+                        <strong>Веб-разработка</strong>
+                        <small>HTML/CSS, React, Node</small>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <a class="sandwich-item" href="#courses">
+                      <span class="si-icon" style="color:var(--yellow)"><i class="bi bi-controller"></i></span>
+                      <span class="si-text">
+                        <strong>Геймдев</strong>
+                        <small>Unity, Unreal Engine</small>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav-btn" href="#about">О нас</a>
+          </li>
+        </ul>
+
+        <!-- Phone -->
+        <a class="navbar-phone" href="tel:+77001234567">
+          <i class="bi bi-telephone-fill me-1"></i>+7 700 123-45-67
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================
+       HERO SECTION
+  ========================================================= -->
+  <section class="hero-section" id="home">
+    <canvas id="matrixCanvas"></canvas>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        Школа программирования нового поколения
+      </div>
+      <h1 class="hero-title">
+        Программируй<br/>
+        <span class="title-accent">будущее</span><br/>
+        уже сегодня
+      </h1>
+      <p class="hero-sub">
+        Практические курсы от действующих разработчиков.
+        От нуля — до первой работы за 6 месяцев.
+      </p>
+      <div class="hero-actions">
+        <a href="#courses" class="btn-neo btn-neo-primary">Выбрать курс <i class="bi bi-arrow-right ms-2"></i></a>
+        <a href="#about" class="btn-neo btn-neo-ghost">Узнать больше</a>
+      </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSyFq1dzuJDywTVtPx0XgzzoQl_gzdgXwNcg&s" alt="Sea">
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="hstat">
+          <span class="hstat-num" data-target="1400">0</span><span>+</span>
+          <small>Выпускников</small>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <span class="hstat-num" data-target="9">0</span><span>+</span>
+          <small>Направлений</small>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <span class="hstat-num" data-target="93">0</span><span>%</span>
+          <small>Трудоустройство</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint">
+      <span>Прокрути вниз</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FEATURES / WHY US
+  ========================================================= -->
+  <section class="section-features" id="why">
+    <div class="container">
+      <div class="section-label">ПОЧЕМУ NEOCODE</div>
+      <h2 class="section-title">Обучение, которое<br/><span class="text-yellow">реально работает</span></h2>
+      <div class="row g-4 mt-2">
+        <div class="col-md-6 col-lg-3">
+          <div class="feat-card" data-color="yellow">
+            <div class="feat-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+            <h4>Практика с первого дня</h4>
+            <p>80% занятий — это живые проекты и задачи из реального рынка труда.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feat-card" data-color="purple">
+            <div class="feat-icon"><i class="bi bi-person-video3"></i></div>
+            <h4>Менторы-практики</h4>
+            <p>Твой ментор — разработчик с опытом в Google, Yandex, Kaspersky.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feat-card" data-color="green">
+            <div class="feat-icon"><i class="bi bi-briefcase-fill"></i></div>
+            <h4>Карьерный центр</h4>
+            <p>Помогаем с резюме, портфолио и выходом на первые 50 собеседований.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feat-card" data-color="red">
+            <div class="feat-icon"><i class="bi bi-infinity"></i></div>
+            <h4>Доступ навсегда</h4>
+            <p>Все материалы и обновления курса — бессрочно, без доплат.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       COURSES CARDS
+  ========================================================= -->
+  <section class="section-courses" id="courses">
+    <div class="container">
+      <div class="section-label">НАШИ КУРСЫ</div>
+      <h2 class="section-title">Найди своё<br/><span class="text-purple">направление</span></h2>
+
+      <div class="row g-4 mt-2">
+
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="course-card" data-color="yellow">
+            <div class="cc-badge">Хит продаж</div>
+            <div class="cc-icon"><i class="bi bi-code-slash"></i></div>
+            <div class="cc-tag">Программирование</div>
+            <h3 class="cc-title">Python-разработчик</h3>
+            <p class="cc-desc">Освой Python с нуля, создавай веб-сервисы, автоматизируй всё что движется.</p>
+            <ul class="cc-features">
+              <li><i class="bi bi-check2"></i> 6 месяцев интенсива</li>
+              <li><i class="bi bi-check2"></i> 12 реальных проектов</li>
+              <li><i class="bi bi-check2"></i> Диплом + GitHub-портфолио</li>
+            </ul>
+            <div class="cc-footer">
+              <div class="cc-price">
+                <span class="price-old">180 000 ₸</span>
+                <span class="price-new">149 000 ₸</span>
+              </div>
+              <a href="#" class="btn-neo btn-neo-sm">Записаться</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="course-card" data-color="purple">
+            <div class="cc-icon"><i class="bi bi-palette2"></i></div>
+            <div class="cc-tag">Дизайн</div>
+            <h3 class="cc-title">UI/UX Дизайнер</h3>
+            <p class="cc-desc">Figma, прототипирование, дизайн-системы и работа с командой разработчиков.</p>
+            <ul class="cc-features">
+              <li><i class="bi bi-check2"></i> 4 месяца</li>
+              <li><i class="bi bi-check2"></i> Реальные кейсы от бизнеса</li>
+              <li><i class="bi bi-check2"></i> Портфолио из 8 проектов</li>
+            </ul>
+            <div class="cc-footer">
+              <div class="cc-price">
+                <span class="price-new">120 000 ₸</span>
+              </div>
+              <a href="#" class="btn-neo btn-neo-sm">Записаться</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="course-card" data-color="red">
+            <div class="cc-badge" style="--badge-color:var(--red)">Новинка</div>
+            <div class="cc-icon"><i class="bi bi-shield-lock"></i></div>
+            <div class="cc-tag">Кибербезопасность</div>
+            <h3 class="cc-title">Этичный хакер</h3>
+            <p class="cc-desc">Penetration testing, CTF, реверс-инжиниринг и защита инфраструктур.</p>
+            <ul class="cc-features">
+              <li><i class="bi bi-check2"></i> 5 месяцев</li>
+              <li><i class="bi bi-check2"></i> Виртуальная лаборатория</li>
+              <li><i class="bi bi-check2"></i> Сертификат CEH</li>
+            </ul>
+            <div class="cc-footer">
+              <div class="cc-price">
+                <span class="price-new">160 000 ₸</span>
+              </div>
+              <a href="#" class="btn-neo btn-neo-sm">Записаться</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="course-card" data-color="green">
+            <div class="cc-icon"><i class="bi bi-robot"></i></div>
+            <div class="cc-tag">ИИ и машинное обучение</div>
+            <h3 class="cc-title">ML-инженер</h3>
+            <p class="cc-desc">TensorFlow, нейросети, NLP и деплой моделей в продакшн.</p>
+            <ul class="cc-features">
+              <li><i class="bi bi-check2"></i> 7 месяцев</li>
+              <li><i class="bi bi-check2"></i> Kaggle-проекты</li>
+              <li><i class="bi bi-check2"></i> Стажировка в партнёрских компаниях</li>
+            </ul>
+            <div class="cc-footer">
+              <div class="cc-price">
+                <span class="price-old">220 000 ₸</span>
+                <span class="price-new">189 000 ₸</span>
+              </div>
+              <a href="#" class="btn-neo btn-neo-sm">Записаться</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="course-card" data-color="yellow">
+            <div class="cc-icon"><i class="bi bi-globe2"></i></div>
+            <div class="cc-tag">Веб-разработка</div>
+            <h3 class="cc-title">Frontend-разработчик</h3>
+            <p class="cc-desc">React, TypeScript, тестирование и современные паттерны frontend-архитектуры.</p>
+            <ul class="cc-features">
+              <li><i class="bi bi-check2"></i> 5 месяцев</li>
+              <li><i class="bi bi-check2"></i> Командные спринты</li>
+              <li><i class="bi bi-check2"></i> 10 проектов в портфолио</li>
+            </ul>
+            <div class="cc-footer">
+              <div class="cc-price">
+                <span class="price-new">135 000 ₸</span>
+              </div>
+              <a href="#" class="btn-neo btn-neo-sm">Записаться</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="course-card" data-color="purple">
+            <div class="cc-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+            <div class="cc-tag">DevOps</div>
+            <h3 class="cc-title">DevOps-инженер</h3>
+            <p class="cc-desc">Docker, Kubernetes, CI/CD, облачные платформы AWS и Azure.</p>
+            <ul class="cc-features">
+              <li><i class="bi bi-check2"></i> 4 месяца</li>
+              <li><i class="bi bi-check2"></i> Облачные лаборатории</li>
+              <li><i class="bi bi-check2"></i> Сертификат AWS Cloud Practitioner</li>
+            </ul>
+            <div class="cc-footer">
+              <div class="cc-price">
+                <span class="price-new">145 000 ₸</span>
+              </div>
+              <a href="#" class="btn-neo btn-neo-sm">Записаться</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row -->
+    </div>
+  </section>
+
+  <!-- =========================================================
+       ABOUT
+  ========================================================= -->
+  <section class="section-about" id="about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="section-label">О НАС</div>
+          <h2 class="section-title">Мы не просто<br/><span class="text-green">учим коду</span></h2>
+          <p class="about-text">
+            NeoCode — это экосистема для тех, кто хочет не просто выучить синтаксис,
+            а войти в IT осознанно и уверенно. С 2019 года мы выпустили более 1400 специалистов,
+            которые работают в компаниях по всему миру.
+          </p>
+          <p class="about-text">
+            Наши менторы — это действующие инженеры с опытом в реальных продуктах.
+            Никаких скучных лекций: только проекты, ревью кода и живое сообщество.
+          </p>
+          <div class="about-tags">
+            <span class="atag atag-yellow">Практика</span>
+            <span class="atag atag-purple">Менторство</span>
+            <span class="atag atag-green">Сообщество</span>
+            <span class="atag atag-red">Карьера</span>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="about-visual">
+            <div class="av-grid">
+              <div class="av-card av-c1">
+                <i class="bi bi-people-fill"></i>
+                <strong>1 400+</strong>
+                <small>выпускников</small>
+              </div>
+              <div class="av-card av-c2">
+                <i class="bi bi-star-fill"></i>
+                <strong>4.9</strong>
+                <small>средний рейтинг</small>
+              </div>
+              <div class="av-card av-c3">
+                <i class="bi bi-building"></i>
+                <strong>80+</strong>
+                <small>партнёров-работодателей</small>
+              </div>
+              <div class="av-card av-c4">
+                <i class="bi bi-award-fill"></i>
+                <strong>#1</strong>
+                <small>в Казахстане 2024</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       REVIEWS
+  ========================================================= -->
+  <section class="section-reviews" id="reviews">
+    <div class="container">
+      <div class="section-label">ОТЗЫВЫ</div>
+      <h2 class="section-title">Что говорят наши<br/><span class="text-red">выпускники</span></h2>
+
+      <div class="row g-4 mt-2">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="review-card">
+            <div class="rc-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="rc-text">"Пришёл без опыта, через 6 месяцев получил оффер в стартапе на 400к₸. NeoCode — это лучшее вложение в себя, которое я когда-либо делал."</p>
+            <div class="rc-author">
+              <div class="rc-avatar" style="background:var(--yellow);color:#000">А</div>
+              <div>
+                <strong>Азамат К.</strong>
+                <small>Python-разработчик, Almaty</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="review-card">
+            <div class="rc-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="rc-text">"Менторы объясняют так, что даже сложные концепции укладываются в голове. Курс по UI/UX дал мне портфолио и уверенность. Уже работаю фрилансом!"</p>
+            <div class="rc-author">
+              <div class="rc-avatar" style="background:var(--purple)">Д</div>
+              <div>
+                <strong>Дана Р.</strong>
+                <small>UI/UX дизайнер, Нур-Султан</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="review-card">
+            <div class="rc-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+            </div>
+            <p class="rc-text">"DevOps-курс — это огонь. Живые облачные лаборатории, реальные pipeline-ы. После обучения сразу взяли на стажировку в IT-компанию."</p>
+            <div class="rc-author">
+              <div class="rc-avatar" style="background:var(--green);color:#000">Т</div>
+              <div>
+                <strong>Тимур В.</strong>
+                <small>DevOps-инженер, Shymkent</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="review-card">
+            <div class="rc-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="rc-text">"ML-курс просто взорвал мозг в хорошем смысле. Начал с линейной регрессии, а закончил деплоем модели на боевой сервер. Невероятный опыт."</p>
+            <div class="rc-author">
+              <div class="rc-avatar" style="background:var(--red)">С</div>
+              <div>
+                <strong>Самат И.</strong>
+                <small>ML-инженер, Remote</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="review-card">
+            <div class="rc-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="rc-text">"Поступила на курс по кибербезопасности с нулевым опытом. Менторы терпеливые, материал структурированный. Сейчас готовлюсь к сертификации CEH."</p>
+            <div class="rc-author">
+              <div class="rc-avatar" style="background:var(--purple)">А</div>
+              <div>
+                <strong>Айгерим М.</strong>
+                <small>Security analyst, Almaty</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="review-card">
+            <div class="rc-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="rc-text">"Frontend-курс за 5 месяцев сделал из меня профессионала. React, TypeScript — всё по делу. Спасибо NeoCode, это лучшая инвестиция!"</p>
+            <div class="rc-author">
+              <div class="rc-avatar" style="background:var(--yellow);color:#000">Е</div>
+              <div>
+                <strong>Ерлан Б.</strong>
+                <small>Frontend dev, Astana</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CTA BANNER
+  ========================================================= -->
+  <section class="section-cta">
+    <div class="container text-center">
+      <h2 class="cta-title">Готов начать свой путь в IT?</h2>
+      <p class="cta-sub">Запишись на бесплатный вводный урок и убедись сам.</p>
+      <a href="tel:+77001234567" class="btn-neo btn-neo-primary btn-neo-lg">
+        <i class="bi bi-telephone-fill me-2"></i>Позвони нам
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5 footer-top">
+        <!-- Brand -->
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <span class="logo-bracket">[</span>Neo<span class="logo-accent">Code</span><span class="logo-bracket">]</span>
+          </div>
+          <p class="footer-tagline">Школа программирования будущего. Учись у тех, кто строит продукты.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Courses -->
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Курсы</h5>
+          <ul class="footer-links">
+            <li><a href="#">Python</a></li>
+            <li><a href="#">UI/UX</a></li>
+            <li><a href="#">Кибербезопасность</a></li>
+            <li><a href="#">Machine Learning</a></li>
+            <li><a href="#">DevOps</a></li>
+            <li><a href="#">Геймдев</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Компания</h5>
+          <ul class="footer-links">
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Преподаватели</a></li>
+            <li><a href="#">Карьерный центр</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Партнёрам</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-4">
+          <h5 class="footer-heading">Контакты</h5>
+          <ul class="footer-contacts">
+            <li>
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:+77001234567">+7 700 123-45-67</a>
+            </li>
+            <li>
+              <i class="bi bi-envelope-fill"></i>
+              <a href="mailto:hello@neocode.kz">hello@neocode.kz</a>
+            </li>
+            <li>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Алматы, ул. Фурманова 180</span>
+            </li>
+            <li>
+              <i class="bi bi-clock-fill"></i>
+              <span>Пн–Пт 09:00–20:00</span>
+            </li>
+          </ul>
+        </div>
+      </div><!-- /row -->
+
+      <div class="footer-bottom">
+        <span>© 2024 NeoCode. Все права защищены.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Публичная оферта</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Наверх">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
